@@ -26,3 +26,11 @@ pip install 'chromadb==0.4.24' 'numpy<2'
 Server: 0.4.24 exposes v1 REST routes used by LangChain’s Chroma integration.
 NumPy < 2 fixes the np.float_ import error for 0.4.x.
 JS client 1.7.3 honors LangChain’s camelCase request fields.
+
+<h5>What is .venv here for ?</h5>
+It’s a Python virtual environment for running the Chroma server.
+It isolates Python packages (e.g., chromadb 0.4.24, numpy<2) from your system/global Python so versions don’t conflict with your Node app or other projects.
+You activate it to start/stop the server:
+Activate: source /Users/jigyasaupadhyay/Documents/Work/customizable-chatbot/.venv/bin/activate
+Run Chroma: /Users/jigyasaupadhyay/Documents/Work/customizable-chatbot/.venv/bin/chroma run ...
+Deactivate: deactivate
