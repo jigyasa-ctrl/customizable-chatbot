@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Docs</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="./main.js"></script>
+
+</head>
+<body>
+    <div class="chatbot_wrapper">
+        <div class="main_chatbot">
+            <!-- Header section -->
+            <header class="chat_header">
+                <div class="flex gap-2 justify-center items-center text-white">
+                    <img src="./assets/header-bot.jpg" alt="header icon" height="10px" width="30px" class="rounded-full ml-2"  />
+                    <h4>Chatty</h4>
+                </div>
+                <span class="mr-2 text-white">X</span>
+            </header>
+            <!-- Chat body section -->
+            <section class="chat_body flex flex-col">
+                <span class="user_message p-1 m-2">Hi</span>
+                <span class="bot_message p-2 m-3 rounded-full">Hello</span>
+                <span class="user_message p-1 m-2">How are you ?</span>
+                <span class="bot_message p-2 m-3 rounded-full">I'm foing good, what about you?</span>
+                <span class="user_message p-1 m-2">Hi</span>
+                <span class="bot_message p-2 m-3 rounded-full">Hello</span>
+                <span class="user_message p-1 m-2">How are you ?</span>
+                <span class="bot_message p-2 m-3 rounded-full">I'm foing good, what about you?</span>
+            </section>
+            <!-- Footer Section -->
+            <footer class="chat_footer flex h-10 m-2 p-2 rounded-[1rem]">
+                <input name="chat" class="w-80 outline-none border-none" placeholder="Say Hello!" />
+                <button>Send</button>
+            </footer>
+        </div>
+        <!-- Chat icon -->
+        <div class="chat_icon">
+            <img src="" alt="chat icon" />
+        </div>
+
+    </div>
+</body>
+</html>

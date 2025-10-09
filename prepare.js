@@ -31,7 +31,7 @@ export const vectorStore = new Chroma(embeddings, {
  export async function indexTheDocument(filepath) {
     const loader = new PDFLoader(filepath, {splitPages: false}) // to load pdf and not split the pages
     const docs = await loader.load()
-    console.log(docs[0].pageContent) // each page is a new documents and comes in array
+    // console.log(docs[0].pageContent) // each page is a new documents and comes in array
     const splitter = new RecursiveCharacterTextSplitter({
         chunkSize: 500,
         chunkOverlap: 100
@@ -45,5 +45,6 @@ export const vectorStore = new Chroma(embeddings, {
         }
     })
     const documentIds = await vectorStore.addDocuments(documents);
+    console.log(documentIds)
     console.log(`Indexed ${documentIds.length} chunks into Chroma collection "${"docs"}"`)
 } 
