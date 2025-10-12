@@ -5,31 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with Docs</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./main.js" defer></script>
 
 </head>
 <body>
-    <div class="chatbot_wrapper">
-        <div class="main_chatbot">
+    <div id="chat_body" class="chatbot_wrapper hidden">
+        <div  class="main_chatbot">
             <!-- Header section -->
             <header class="chat_header">
                 <div class="flex gap-2 justify-center items-center text-white">
                     <img src="./assets/header-bot.jpg" alt="header icon" height="10px" width="30px" class="rounded-full ml-2"  />
                     <h4>Chatty</h4>
                 </div>
-                <span class="mr-2 text-white">X</span>
+                <span onclick="handleBotClose()" class="mr-2 text-white cursor-pointer">X</span>
             </header>
             <!-- Chat body section -->
             <section class="chat_body flex flex-col">
-                <span class="user_message p-1 m-2">Hi</span>
-                <span class="bot_message p-2 m-3 rounded-full">Hello</span>
-                <span class="user_message p-1 m-2">How are you ?</span>
-                <span class="bot_message p-2 m-3 rounded-full">I'm foing good, what about you?</span>
-                <span class="user_message p-1 m-2">Hi</span>
-                <span class="bot_message p-2 m-3 rounded-full">Hello</span>
-                <span class="user_message p-1 m-2">How are you ?</span>
-                <span class="bot_message p-2 m-3 rounded-full">I'm foing good, what about you?</span>
+                <div class="bot_message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">Hello! I'm Jigyasa's AI assitant! How can I help you today?</div>
+                </div>
+                <div class="user_message">
+                    <div class="message-content">Hi</div>
+                    <div class="avatar">👤</div>
+                </div>
+                <div class="bot_message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">Hello! How can I help you today?</div>
+                </div>
+                <div class="user_message">
+                    <div class="message-content">How are you?</div>
+                    <div class="avatar">👤</div>
+                </div>
+                <div class="bot_message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">I'm doing great, thank you for asking! I'm here and ready to assist you with any questions you might have. What would you like to know?</div>
+                </div>
+                <div class="user_message">
+                    <div class="message-content">What can you help me with?</div>
+                    <div class="avatar">👤</div>
+                </div>
+                <div class="bot_message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">I can help you with a wide variety of tasks! I can answer questions, provide information, help with problem-solving, assist with writing and editing, explain concepts, and much more. What specific topic or task would you like assistance with?</div>
+                </div>
             </section>
             <!-- Footer Section -->
             <footer class="chat_footer flex h-10 m-2 p-2 rounded-[1rem]">
@@ -38,10 +58,11 @@
             </footer>
         </div>
         <!-- Chat icon -->
-        <div class="chat_icon">
-            <img src="" alt="chat icon" />
-        </div>
+       
 
+    </div>
+    <div id="chatIcon" onclick="handleBotClick()" class="absolute bottom-0 right-0 cursor-pointer">
+        <img src="./assets/header-bot.jpg" alt="chat icon" height="50px" width="50px" class="rounded-full float-right m-3" />
     </div>
 </body>
 </html>
