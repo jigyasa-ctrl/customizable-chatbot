@@ -12,7 +12,7 @@ Tip: chromadb@1.7.3 works well with LangChain’s camelCase request body.
 # Run a local Chroma server (Python, isolated venv)
 
 python3 -m venv .venv && source .venv/bin/activate
-pip install 'chromadb==0.4.24' 'numpy<2'
+pip install 'chromadb==0.4.24' 'numpy<2' 
 /Users/you/path/.venv/bin/chroma run \
   --host 0.0.0.0 --port 8001 \
   --path /absolute/path/to/chroma_db
